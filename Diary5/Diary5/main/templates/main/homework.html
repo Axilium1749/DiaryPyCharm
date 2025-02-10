@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <body class="wrapper">
+        <header class="container">
+            <img class="hw-logo" id="hw-logo" src="{% static 'main/img/hw-logo-standart.svg' %}" alt="HW Logo">
+            <nav>
+                <ul>
+                    <button class="button1">
+                        <ul class="date">
+                            <li class="time">15 Января 2025</li>
+                            <li class="lowtext">8 уроков</li>
+                            <li class="lowtext">4 уведомления</li>
+                        </ul>
+                        
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="../">Расписание</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="marks">Оценки</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="notifications">Уведомления</a></li>
+                    </button>
+                        <a href="settings" class="settings-link">
+                            <img id="sett-icon" class="sett-icon" src="{% static 'main/img/settings.svg' %}" alt="Settings logo">
+                        </a>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="dzheader">
+            <h1>
+                <p>Домашнее задание</p>
+            </h1>
+            <h2>
+                <a href="#" class="arrow-left"></a>
+                <p class="text">13 января, понедельник</p>
+                <a href="#" class="arrow-right"></a>
+            </h2>
+        </div>
+
+        <ul class="rasp">
+            <li>
+                <div class="left">
+                    <p class="lesson-number">1 Урок</p>
+                    <p class="lesson-name">Информатика</p>
+                    <p class="lesson-time">8:30 - 9:10</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Яндекс лицей, урок “Вложенные циклы”: раздел “домашняя работа” и “доп. задачи”.</p>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <p class="lesson-number">2 Урок</p>
+                    <p class="lesson-name">Алгебра</p>
+                    <p class="lesson-time">9:30 - 10:10</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Учебник №№: 642, 643, 645(б); <br>Выполнить тест: https://ege.sdamgia.ru/test?id=80101988</p>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <p class="lesson-number">3 Урок</p>
+                    <p class="lesson-name">Геометрия</p>
+                    <p class="lesson-time">10:30 - 11:10</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Доделать распечатку с сечениями; <br>Выполнить тест: https://ege.sdamgia.ru/test?id=80101988 <br>Повторить теорию с урока.</p>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <p class="lesson-number">4 Урок</p>
+                    <p class="lesson-name">ОБЗР</p>
+                    <p class="lesson-time">11:30 - 12:10</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate laudantium error sequi adipisci rem fuga itaque laboriosam ex et est aut necessitatibus quasi deserunt reprehenderit rerum nesciunt cum, exercitationem non assumenda. Et corrupti repudiandae ad inventore ea modi repellat, sequi nihil, omnis distinctio deserunt illo saepe ipsum voluptatem autem libero eaque assumenda id necessitatibus eum ex adipisci culpa fugiat magnam. Maxime aliquam, est praesentium dolor nam eius quas reprehenderit iste quos iure harum cum ad dignissimos odit quasi cumque facere? Fuga veniam, quis deleniti voluptas modi officiis recusandae ab commodi harum magnam atque rerum quisquam. Asperiores corporis rerum non eligendi aliquid illo saepe officia voluptate?</p>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <p class="lesson-number">5 Урок</p>
+                    <p class="lesson-name">Физика</p>
+                    <p class="lesson-time">12:20 - 13:00</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Ну что-то да будет</p>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <p class="lesson-number">6 Урок</p>
+                    <p class="lesson-name">Физика</p>
+                    <p class="lesson-time">13:20 - 14:00</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Монастырский все тома решения в тетради</p>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <p class="lesson-number">7 Урок</p>
+                    <p class="lesson-name">Физ-ра</p>
+                    <p class="lesson-time">14:20 - 15:00</p>
+                </div>
+                <div class="right">
+                    <p class="homework">Никто не придет</p>
+                </div>
+            </li>
+            <!-- Добавь другие уроки здесь -->
+        </ul>
+        
+          
+  
+    </body>
+</body>

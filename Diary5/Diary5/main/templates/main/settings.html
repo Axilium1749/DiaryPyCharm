@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <body class="wrapper">
+        <header class="container">
+            <img class="sett-logo" id="sett-logo" src="{% static 'main/img/marks-logo-standart.svg' %}" alt="Settings Logo">
+            <nav>
+                <ul>
+                    <button class="button1">
+                        <ul class="date">
+                            <li class="time">15 Января 2025</li>
+                            <li class="lowtext">8 уроков</li>
+                            <li class="lowtext">4 уведомления</li>
+                        </ul>
+                        
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="homework">Домашнее задание</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="marks">Оценки</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="notifications">Уведомления</a></li>
+                    </button>
+                        <a href="../" class="settings-link">
+                            <img id="sett-icon" class="sett-icon" src="{% static 'main/img/settings.svg' %}" alt="Settings logo">
+                        </a>
+                </ul>
+            </nav>
+        </header>
+        <button class="button3">
+            <li class="btn"><a href="teacher">Учитель</a></li>
+        </button>
+    {% if user.is_authenticated %}
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
+{% endif %}
+
+ 
+
+
+
+</body>
+    
+</body>   
+

@@ -1,0 +1,339 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <body class="wrapper">
+        <header class="container">
+            <img class="marks-logo" id="marks-logo" src="{% static 'main/img/marks-logo-standart.svg' %}" alt="Marks Logo">
+            <nav>
+                <ul>
+                    <button class="button1">
+                        <ul class="date">
+                            <li class="time">15 Января 2025</li>
+                            <li class="lowtext">8 уроков</li>
+                            <li class="lowtext">4 уведомления</li>
+                        </ul>
+                        
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="homework">Домашнее задание</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="../">Расписание</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="notifications">Уведомления</a></li>
+                    </button>
+                        <a href="settings" class="settings-link">
+                            <img id="sett-icon" class="sett-icon" src="{% static 'main/img/settings.svg' %}" alt="Settings logo">
+                        </a>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="dzheader">
+            <h1>
+                <p>Оценки</p>
+            </h1>
+            <ul class="marksselect">
+                <a class="left" href="#" id="byDateButton">По дате</a>
+                <div class="divider"></div> <!-- Вертикальная линия между блоками -->
+                <a class="right" href="#" id="bySubjectButton">По предмету</a>
+            </ul>
+        </div>
+        <div class="scrollcontainer">
+            <div class="marks-list-container" >
+                <div class="marks-list" id="byDateList">
+                    <div class="marks-date">Сегодня, 17 января</div>
+                    <div class="marks-item">
+                        <span class="marks-index">5<sub>2</sub></span>
+                        <span class="marks-subject">Информатика</span>
+                        <span class="marks-task">Решение задач у доски</span>
+                        <span class="marks-comment">Lorem ipsum dolor sit amet.</span>
+                        <span class="marks-time">12:29</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">2</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Контрольная работа</span>
+                        <span class="marks-comment">7/15 баллов. Фото работы прикреплено.</span>
+                        <span class="marks-time">11:48</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">5</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Диктант</span>
+                        <span class="marks-comment">Диктант</span>
+                        <span class="marks-time">18:30</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">5<sub>2</sub></span>
+                        <span class="marks-subject">Информатика</span>
+                        <span class="marks-task">Решение задач у доски</span>
+                        <span class="marks-comment">Комментарий отсутствует</span>
+                        <span class="marks-time">12:29</span>
+                    </div>
+                    <div class="marks-date">Сегодня, 17 января</div>
+                    <div class="marks-item">
+                        <span class="marks-index">2</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Контрольная работа</span>
+                        <span class="marks-comment">7/15 баллов. Фото работы прикреплено.</span>
+                        <span class="marks-time">11:48</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">5</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Диктант</span>
+                        <span class="marks-comment">Диктант</span>
+                        <span class="marks-time">18:30</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">2</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Контрольная работа</span>
+                        <span class="marks-comment">7/15 баллов. Фото работы прикреплено.</span>
+                        <span class="marks-time">11:48</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">5</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Диктант</span>
+                        <span class="marks-comment">Диктант</span>
+                        <span class="marks-time">18:30</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">2</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Контрольная работа</span>
+                        <span class="marks-comment">7/15 баллов. Фото работы прикреплено.</span>
+                        <span class="marks-time">11:48</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">5</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Диктант</span>
+                        <span class="marks-comment">Диктант</span>
+                        <span class="marks-time">18:30</span>
+                    </div>
+                    <div class="marks-date">Сегодня, 17 января</div>
+                    <div class="marks-item">
+                        <span class="marks-index">2</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Контрольная работа</span>
+                        <span class="marks-comment">7/15 баллов. Фото работы прикреплено.</span>
+                        <span class="marks-time">11:48</span>
+                    </div>
+                    <div class="marks-item">
+                        <span class="marks-index">5</span>
+                        <span class="marks-subject">Физика</span>
+                        <span class="marks-task">Диктант</span>
+                        <span class="marks-comment">Диктант</span>
+                        <span class="marks-time">18:30</span>
+                    </div>
+                    
+                    <!-- Дополнительные строки -->
+                </div>
+                <div class="marks-list" id="bySubjectList" style="display: none;">
+                    <article class="subject-article">
+                        <div class="subject">
+                            <div class="sub-subject">
+                                <p>Обществознание</p>
+                                <p1 class="quarter">1 четверть</p1>
+                            </div>
+                            <div class="marks-container">
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+    
+                            </div>
+                            <p class="final-mark">5</p>
+                        </div>
+                    </article>
+                    <article class="subject-article">
+                        <div class="subject">
+                            <div class="sub-subject">
+                                <p>Физика</p>
+                                <p1 class="quarter">1 четверть</p1>
+                            </div>
+                            <div class="marks-container">
+                                <span class="mark">5<sub>2</sub></span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+    
+                            </div>
+                            <p class="final-mark">5</p>
+                        </div>
+                    </article>
+                    <article class="subject-article">
+                        <div class="subject">
+                            <div class="sub-subject">
+                                <p>Обществознание</p>
+                                <p1 class="quarter">1 четверть</p1>
+                            </div>
+                            <div class="marks-container">
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+    
+                            </div>
+                            <p class="final-mark">5</p>
+                        </div>
+                    </article>
+                    <article class="subject-article">
+                        <div class="subject">
+                            <div class="sub-subject">
+                                <p>Английский язык</p>
+                                <p1 class="quarter">1 четверть</p1>
+                            </div>
+                            <div class="marks-container">
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+                                <span class="mark">2</span>
+                                <span class="mark">3</span>
+                                <span class="mark">3</span>
+                                <span class="mark">4</span>
+                                <span class="mark">2</span>
+                                <span class="mark">5</span>
+                                <span class="mark">2</span>
+    
+                            </div>
+                            <p class="final-mark">5</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+                
+        
+
+
+        <script src="{% static 'main/js/main.js' %}"></script>
+    </body>    
+</body>        
+
+        

@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <body class="wrapper">
+        <header class="container">
+            <img class="notif-logo" id="notif-logo" src="{% static 'main/img/notif-logo-standart.svg' %}" alt="Notification Logo">
+            <nav>
+                <ul>
+                    <button class="button1">
+                        <ul class="date">
+                            <li class="time">15 Января 2025</li>
+                            <li class="lowtext">8 уроков</li>
+                            <li class="lowtext">4 уведомления</li>
+                        </ul>
+
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="homework">Домашнее задание</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="marks">Оценки</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="../">Расписание</a></li>
+                    </button>
+                        <a href="settings" class="settings-link">
+                            <img id="sett-icon" class="sett-icon" src="{% static 'main/img/settings.svg' %}" alt="Settings logo">
+                        </a>
+                </ul>
+            </nav>
+        </header>
+            
+        <div class="dzheader">
+            <h1>
+                <p>Уведомления</p>
+            </h1>
+        </div>
+        
+        <ul class="listnotifications">
+        <div class="scroll-container">
+            <li class="onenotif-unreaded">
+                <p class="unreaded-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>
+            <li class="onenotif-unreaded">
+                <p class="unreaded-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>
+            <li class="onenotif-unreaded">
+                <p class="unreaded-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>
+            <li class="onenotif-unreaded">
+                <p class="unreaded-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>
+            <li class="onenotif-readed">
+                <p class="readed-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>
+            <li class="onenotif-readed">
+                <p class="readed-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>
+            <li class="onenotif-readed">
+                <p class="readed-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li>  
+            <li class="onenotif-readed">
+                <p class="readed-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li> 
+            <li class="onenotif-readed">
+                <p class="readed-text">Получена новая оценка по предмету Информатика: 5. Решение задач у доски.</p>
+                <p class="notif-time">12:29</p>
+            </li> 
+        </div>
+        </ul>
+
+
+    </body>
+</body>

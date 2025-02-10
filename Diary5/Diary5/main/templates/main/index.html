@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <body class="wrapper">
+        <header class="container">
+            <img class="beha-logo" id="beha-logo" src="{% static 'main/img/beha-logo-standart.svg' %}" alt="Beha Logo">
+            <nav>
+                <ul>
+                    <button class="button1">
+                        <ul class="date">
+                            <li class="time">{{ days_with_schedule.0.date }}</li>
+                            <li class="lowtext">8 уроков</li>
+                            <li class="lowtext">4 уведомления</li>
+                        </ul>
+
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="homework">Домашнее задание</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="marks">Оценки</a></li>
+                    </button>
+                    <button class="button3">
+                        <li class="btn"><a href="notifications">Уведомления</a></li>
+                    </button>
+                    <a href="settings" class="settings-link">
+                        <img id="sett-icon" class="sett-icon" src="{% static 'main/img/settings.svg' %}" alt="Settings logo">
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <div class="scheduleheader">
+            <schedule_header>
+                <h1>
+                    <p class="text">Расписание</p>
+                </h1>
+                <h2>
+                    <a href="#" class="arrow-left"></a>
+                    <p class="text">{{ date_range }}</p>
+                    <a href="#" class="arrow-right"></a>
+                </h2>
+            </schedule_header>
+        </div>
+        <div class="schedule_all">
+    <ul class="schedule-time">
+    <li class="time">Время</li>
+    <li>8:30 - 9:10</li>
+    <li>9:30 - 10:10</li>
+    <li>10:30 - 11:10</li>
+    <li>11:30 - 12:10</li>
+    <li>12:10 - 13:00</li>
+    <li>13:20 - 14:00</li>
+    <li>14:20 - 15:00</li>
+    <li>15:20 - 16:00</li>
+</ul>
+{% for day in days_with_schedule %}
+        <ul class="day">
+            <li class="time">{{ day.date }}<br>{{ day.day_of_week }}</li>
+            {% for lesson in day.schedule %}
+            <li class="grade">
+                <span class="number">{{ lesson.subject.name }}</span>
+                <!-- Если нужно добавить оценки, можно добавить логику здесь -->
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+</div>
+
+
+    <body>
+</body>
+</html>

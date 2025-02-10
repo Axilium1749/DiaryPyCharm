@@ -1,0 +1,1245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+a:link { color: #000000; }
+a:visited { color: #000000; }
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Для Webkit браузеров (Chrome, Safari) */
+    -moz-appearance: none;    /* Для Firefox */
+    appearance: none;         /* Стандартный способ */
+    
+    width: 1.2rem; /* Размер */
+    height: 1.2rem; /* Размер */
+    border: 0.06rem solid rgba(0, 0, 0, 0.3); /* Цвет границы */
+    border-radius: 0.3rem; /* Скругленные углы */
+    background-color: rgba(255, 249, 229, 0.4);
+    position: relative; /* Для позиционирования галочки */
+    cursor: pointer; /* Курсор на чекбоксе */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Плавная анимация */
+}
+
+/* Эффект нажатия (затемнение) */
+input[type="checkbox"]:active {
+    background-color: rgba(0, 0, 0, 0.2); /* Легкое затемнение */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень */
+}
+
+/* Стиль, когда чекбокс отмечен */
+input[type="checkbox"]:checked {
+    background-color: #DED1A5; /* Цвет фона при отметке */
+    border-color: rgba(0, 0, 0, 0.3); /* Цвет границы при отметке */
+}
+
+/* Галочка для отмеченного чекбокса */
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Unicode для галочки */
+    position: absolute;
+    top: -0.35rem;
+    left: 0.05rem; /* Позиция галочки */
+    color: #7a7255;
+    font-size: 20px; /* Размер галочки */
+}
+
+
+/* ТЕМЫ ЦВЕТ РАЗНЫЕ */
+
+body {background-color: #FFF8DA; color: #000;}
+body.light-theme {background-color: #F2ECD7; color: #000;}
+body.dark-theme {background-color: #19191C; color: #FFFFFF;}
+button {background-color: #E2D6AF; color: #000;}
+button.light-theme {background-color: #FFFCF2; color: #000;}
+button.dark-theme {background-color: #3A3A40; color: #FFFFFF;}
+a {color: #000;}
+a.light-theme {color: #000;}
+a.dark-theme {color: #FFFFFF;}
+h1 {background-color: #E2D6AF;}
+h1.light-theme {background-color: #FFFCF2;}
+h1.dark-theme {background-color: #3A3A40;}
+h2 {background-color: #E2D6AF;}
+h2.light-theme {background-color: #FFFCF2;}
+h2.dark-theme {background-color: #3A3A40;}
+header {border-bottom: 0.2rem solid black; /* Черная линия снизу */}
+header.light-theme {border-bottom: 0.2rem solid black; /* Черная линия снизу */}
+header.dark-theme {border-bottom: 0.2rem solid #4B4B52; /* Черная линия снизу */}
+a.settings-link {background-color: #E2D6AF;}
+a.settings-link.light-theme {background-color: #FFFCF2;}
+a.settings-link.dark-theme {background-color: #3A3A40;}
+.sett-icon {fill: black;}
+.sett-icon.light-theme {fill: white;}
+.sett-icon.dark-theme {fill: #FFFFFF;}
+.schedule_all ul {background-color: #E2D6AF;}
+.schedule_all ul.light-theme{background-color: #FFFCF2;}
+.schedule_all ul.dark-theme{background-color: #2E2D39;}
+.day li {border-bottom: 2px solid #000000;}
+.day li.light-theme{border-bottom: 2px solid #000000;}
+.day li.dark-theme{border-bottom: 1px solid #fff;}
+.schedule-time li {border-bottom: 2px solid #000000;} 
+.schedule-time li.light-theme{border-bottom: 2px solid #000000;} 
+.schedule-time li.dark-theme{border-bottom: 1px solid #FFF;} 
+.ocn {background-color: #AEA77D;}
+.ocn.light-theme{background-color: #FFFCF2;}
+.ocn.dark-theme{background-color: #19191C;}
+.login-body {background-image: url('../img/фон.svg');}
+.login-body.light-theme{background-image: url('../img/фон-light.svg');}
+.login-body.dark-theme{background-image: url('../img/фон-dark.svg');}
+.login-border {background-color: #F0E2B3;}
+.login-border.light-theme{background-color: #FFFCF2;}
+.login-border.dark-theme{background-color: #3A3A40;}
+.login-select{background-color: #E2D6AF; /* Цвет фона */}
+.login-select.light-theme{background-color: #F2ECD7; /* Цвет фона */}
+.login-select.dark-theme{background-color: #303037; /* Цвет фона */}
+.login-select .active{background-color: #BCB087;}
+.login-select .active.light-theme{background-color: #FFF6F6;}
+.login-select .active.dark-theme{background-color: #3A3A40;}
+.login-select .left:hover, .login-select .right:hover {background-color: #BCB087;}
+.login-select .left:hover.light-theme, .login-select .right:hover.light-theme{background-color: #FFF6F6;}
+.login-select .left:hover.dark-theme, .login-select .right:hover.dark-theme{background-color: #3A3A40;}
+.login-button {background-color: #BCB087;}
+.login-button.light-theme{background-color: #F2ECD7;}
+.login-button.dark-theme{background-color: #19191C;}
+.rasp li {background: #BCB087; color: #000;}
+.rasp li.light-theme{background: #FFFCF2; color: #000;}
+.rasp li.dark-theme{background: #2E2D39; color: #FFF;}
+.homework {color: #000;}
+.homework.light-theme{color: #000;}
+.homework.dark-theme{color: #FFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+:root {
+
+    --hw-logo: url('..\img\logo\hw-logo-standart.svg');
+    --logo-login: url('..\img\logo\hw-logo-standart.svg');
+    --beha-logo: url('..\img\logo\beha-logo-standart.svg');
+    --sett-logo: url('..\img\logo\marks-logo-standart.svg');
+    --marks-logo: url('..\img\logo\marks-logo-standart.svg');
+    --notif-logo: url('..\img\logo\notif-logo-standart.svg');
+}
+
+
+.hw-logo.standart-theme {
+    --hw-logo: url('..\img\logo\hw-logo-standart.svg');
+}
+.logo-login.standart-theme {
+    --logo-login: url('..\img\logo\hw-logo-standart.svg');
+}
+.beha-logo.standart-theme {
+    --beha-logo: url('..\img\logo\beha-logo-standart.svg');
+}
+.sett-logo.standart-theme {
+    --sett-logo: url('..\img\logo\marks-logo-standart.svg');
+}
+.marks-logo.standart-theme {
+    --marks-logo: url('..\img\logo\marks-logo-standart.svg');
+}
+.notif-logo.standart-theme {
+    --notif-logo: url('..\img\logo\notif-logo-standart.svg');
+}
+
+
+.hw-logo.light-theme {
+    --hw-logo: url('..\img\logo\hw-logo-light.svg');
+}
+.logo-login.light-theme {
+    --logo-login: url('..\img\logo\hw-logo-light.svg');
+}
+.beha-logo.light-theme {
+    --beha-logo: url('..\img\logo\beha-logo-light.svg');
+}
+.sett-logo.light-theme {
+    --sett: url('..\img\logo\marks-logo-light.svg');
+}
+.marks-logo.light-theme {
+    --marks-logo: url('..\img\logo\marks-logo-light.svg');
+}
+.notif-logo.light-theme {
+    --notif-logo: url('..\img\logo\notif-logo-light.svg');
+}
+
+
+.hw-logo.dark-theme {
+    --hw-logo: url('..\img\logo\hw-logo-dark.svg');
+}
+.logo-login.dark-theme {
+    --logo-login: url('..\img\logo\hw-logo-dark.svg');
+}
+.beha-logo.dark-theme {
+    --beha-logo: url('..\img\logo\beha-logo-dark.svg');
+}
+.sett-logo.dark-theme {
+    --sett-logo: url('..\img\logo\marks-logo-dark.svg');
+}
+.marks-logo.dark-theme {
+    --marks-logo: url('..\img\logo\marks-logo-dark.svg');
+}
+.notif-logo.dark-theme {
+    --notif-logo: url('..\img\logo\notif-logo-dark.svg');
+}
+
+*/
+.hw-logo {
+    /*background-image: var(--hw-logo);*/
+    width: 17vh;
+    padding-left: 0.6em;
+    min-width: 1em;
+    min-height: 10em;
+    margin-right: 2em;
+    transform: translateY(-0.8em);
+}
+
+.logo-login {
+    /*background-image: var(--logo-login);*/
+    margin: 2em;
+    width: 12vw;
+    z-index: 2;
+}
+
+.beha-logo {
+    /*background-image: var(--beha-logo);*/
+    width: 17vh;
+    padding-left: 0.6em;
+    min-width: 1em;
+    min-height: 10em;
+    margin-right: 2em;
+    transform: translateY(-0.8em);
+}
+
+.sett-logo {
+    /*background-image: var(--sett-logo);*/
+    width: 17vh;
+    padding-left: 0.6em;
+    min-width: 1em;
+    min-height: 10em;
+    margin-right: 2em;
+    transform: translateY(-0.8em);
+}
+
+.marks-logo {
+    /*background-image: var(--marks-logo);*/
+    width: 17vh;
+    padding-left: 0.6em;
+    min-width: 1em;
+    min-height: 10em;
+    margin-right: 2em;
+    transform: translateY(-0.8em);
+}
+
+.notif-logo {
+    /*background-image: var(--notif-logo);*/
+    width: 17vh;
+    padding-left: 0.6em;
+    min-width: 1em;
+    min-height: 10em;
+    margin-right: 2em;
+    transform: translateY(-0.8em);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Inter", serif;
+    font-weight: 600;
+    /*font-size: 16px;*/
+    margin: 0; /* Убираем стандартные отступы */
+    padding: 0;
+    width: 100%; /* Ширина body всегда 100% */
+    height: 100%;
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    background: rgb(255, 248, 218);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+}
+
+header {
+    border-bottom: 0.15rem solid black; /* Черная линия снизу */
+    padding: 1vw;
+    max-height: 8em;
+}
+
+header nav {
+    float: right;
+    width: 89%;
+    padding-top: 0.5vw
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+head nav ul li a {
+    color: #000000
+}
+
+
+
+.date {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    white-space: nowrap;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 8em;
+    max-height: 5.5em;
+}
+
+.lowtext {
+    font-size: 16;
+    font-weight: 400;
+}
+button.button3 {
+    border: none;
+    display: flex;
+    justify-content: center;  /* Выравнивание по горизонтали */
+    align-items: center;      /* Выравнивание по вертикали */
+    border-radius: 1em;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    width: 14vw;
+    height:11vh;
+    min-width: 8em;
+    min-height: 4em;
+    font-size: 28px;
+    padding: 0.3vw 1vw; /* Поля вокруг текста */
+    text-align: center; /* Обязательно для центрирования текста по горизонтали */
+    word-wrap: break-word; /* Разрешаем перенос текста */
+    white-space: normal;  /* Текст будет переноситься на новые строки */
+    transition: opacity 0.2s ease;
+}
+
+button.button3:hover {
+    opacity: 0.7;
+}
+
+button.button1 {
+    border: none;
+    display: flex;
+    border-radius: 1.3em;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    width: 14vw;
+    height:12vh;
+    min-width: 8em;
+    min-height: 5em;
+    font-size: 20px; /* Размер текста */
+    padding: 0.35em 1em 0; /* Поля вокруг текста */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    transition: opacity 0.2s ease;
+}
+
+
+.settings-link {
+    display: inline-block;  /* Убедитесь, что ссылка ведет себя как блочный элемент */
+    width: 6rem;
+    height: 6rem;
+    min-width: 5rem;
+    min-height: 5rem;
+    border-radius: 1em;
+    text-align: center;  /* Центрируем изображение внутри кнопки */
+    padding: 5px;  /* Отступы вокруг изображения */
+    cursor: pointer;  /* Курсор как указатель при наведении */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.settings-link img {
+    width: 60%;  /* Убедитесь, что изображение заполняет контейнер */
+    height: 60%;  /* Убедитесь, что изображение заполняет контейнер */
+    object-fit: contain;  /* Масштабируем изображение, сохраняя пропорции */
+    border-radius: 10px;  /* Скругление изображения для соответствия кнопке */
+
+}
+
+.settings-link:hover {
+    opacity: 0.7;
+}
+
+
+div.scheduleheader {
+    float: center;
+    padding: 1.5vw;
+}
+
+
+h1 {
+    display: flex;
+    border-radius: 0.7em;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    width: 85%;
+    height: 2em;
+    background: #E2D6AF; /* Цвет фона */
+    border-color: #000000;
+    font-size: 28px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    align-items: center;
+    margin: auto
+}
+
+h2 { 
+    display: flex;
+    border-radius: 20px;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    width: 85%;
+    height: 2.2em;
+    background: #E2D6AF; /* Цвет фона */
+    border-color: #000000;
+    font-size: 32px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    align-items: center;
+    margin: 20px auto 0;
+    position: relative;
+}
+a.arrow-left, a.arrow-right {
+    position: absolute;
+    top: 50%;
+    display: block;
+    transform: translateY(-30%);
+    width: 6vw;  /* Ширина стрелки */
+    height: 3vh;  /* Высота стрелки */
+    background-size: contain;  /* Сохраняем пропорции изображения */
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a.arrow-left {
+    left: 1em;  /* Позиционируем стрелку слева */
+    background-image: url('../img/Arrow 2.svg');  /* Путь к изображению стрелки слева */
+}
+
+a.arrow-right {
+    right: 1em;  /* Позиционируем стрелку справа */
+    background-image: url('../img/Arrow 1.svg');  /* Путь к изображению стрелки справа */
+}
+
+a.arrow-left.light-theme {
+    left: 1em;  /* Позиционируем стрелку слева */
+    background-image: url('../img/Arrow 2.svg');  /* Путь к изображению стрелки слева */
+}
+
+a.arrow-right.light-theme {
+    right: 1em;  /* Позиционируем стрелку справа */
+    background-image: url('../img/Arrow 1.svg');  /* Путь к изображению стрелки справа */
+}
+
+a.arrow-left.dark-theme {
+    left: 1em;  /* Позиционируем стрелку слева */
+    background-image: url('../img/Arrow 2-dark.svg');  /* Путь к изображению стрелки слева */
+}
+
+a.arrow-right.dark-theme {
+    right: 1em;  /* Позиционируем стрелку справа */
+    background-image: url('../img/Arrow 1-dark.svg');  /* Путь к изображению стрелки справа */
+}
+
+
+
+
+a.arrow-left:hover, a.arrow-right:hover {
+    opacity: 0.5;  /* При наведении стрелка станет немного прозрачной */
+}
+
+
+.schedule_all {
+    display: flex; /* Оставляем флекс-контейнер */
+    justify-content: center; /* Элементы располагаются слева, без дополнительного пространства */
+    align-items: center; /* Выравнивание по верхнему краю */
+}
+
+.schedule-time {
+    display: flex;
+    flex-direction: column; /* Оставляем столбцовое направление для первого списка */
+    border-radius: 1.4em;
+    width: 7em;
+    height: 30.3em;
+    padding: 1vh; /* Отступы для лучшего восприятия */
+    list-style: none;
+    white-space: nowrap;
+}
+
+.schedule-time .day {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 1em;
+    height: 31em;
+    margin-left: 2em; /* Отступы между столбцами */
+    width: 10em; /* Все столбцы будут одинаковой ширины */
+}
+
+.schedule-time li {
+    padding: 15px 0;  /* Отступы для каждого элемента списка */
+    text-align: center;
+}
+
+.schedule-time .time {
+    font-weight: 600; /* Жирный шрифт */
+    font-size: 20px;  /* Размер шрифта */
+    font-family: "Inter", serif;
+    padding-bottom: 1.6em;
+    padding-top: 1.2em;
+}
+
+.schedule-time li:last-child {
+    border-bottom: none;  /* Убираем линию у последнего элемента */
+}
+
+.day {
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    display: flex;
+    flex-direction: column; /* Элементы располагаться в колонку */
+    justify-content: space-between;
+    border-radius: 20px;
+    width: 14em;
+    height: 30.3em;
+    padding: 1vh;
+    list-style: none;
+    margin-left: 1em;
+}
+
+.day li {
+    display: flex;
+    padding: 0.69rem 0;
+    text-align: center;
+    border-bottom: 2px solid #000000;
+}
+
+.day .time {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Inter", serif;
+    padding-bottom: 19px;
+}
+
+.day li:last-child {
+    border-bottom: none;
+}
+
+.grade {
+    display: flex;
+    justify-content: space-between; /* Располагаем элементы по бокам */
+    align-items: center; /* Выравнивание по вертикали */
+    width: 100%; /* На всю ширину */
+}
+
+.number {
+    font-size: 1rem; /* Размер шрифта для числа */
+    font-weight: 600;
+    padding-left: 0.5em;
+}
+
+.ocn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25 em;
+    margin-left: 5px;
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 0.3em;
+}
+
+.ocn sub {
+    margin-top: 0.5rem;
+}
+.dzheader {
+    float: center;
+    padding: 1.3em;
+    margin-bottom: 0.4em;
+}
+
+/* Контейнер с отступом от левого края и без обводки */
+.rasp {
+    list-style: none;
+    margin-top: 1em;
+    margin: 0 auto;  /* Отступ от левого края страницы */
+    padding: 0;
+    width: 88vw;
+    max-height: 57vh;
+    overflow-y: auto;
+    border: none;       /* Убираем границу у самого контейнера */
+}
+
+.rasp::-webkit-scrollbar {
+    width: 0.8em; /* Ширина ползунка */
+}
+
+/* Стили для "ползунка" (ручки) */
+.rasp::-webkit-scrollbar-thumb {
+    background-color: #E2D6AF; /* Цвет ползунка */
+    border-radius: 1em; /* Закругляем углы ползунка */
+    border: 0.2em solid transparent; /* Чтобы сделать пространство вокруг ползунка */
+    background-clip: content-box; /* Убирает границу вокруг ползунка */
+}
+
+/* Стили для ползунка при наведении */
+.rasp::-webkit-scrollbar-thumb:hover {
+    background-color: #BCB087; /* Темный цвет при наведении */
+}
+
+/* Стили для полосы прокрутки (фон) */
+.rasp::-webkit-scrollbar-track {
+    background: #FFF8DA; /* Цвет фона полосы прокрутки */
+    border-radius: 1em;  /* Закругляем углы полосы */
+}
+
+/* Стили для полосы прокрутки при наведении */
+.rasp::-webkit-scrollbar-track:hover {
+    background: #FFF8DA; /* Немного темнее при наведении */
+}
+
+/* Стили для области, где ползунок появляется */
+.rasp::-webkit-scrollbar-corner {
+    background-color: #FFF8DA;
+}
+  
+.rasp li {
+    display: flex;
+    padding: 1em;   /* Вертикальные отступы */
+    margin-bottom: 1em;
+    border-radius: 1.3em; /* Закругляем углы контейнера */
+    width: 98%;
+}
+  
+.left {
+    padding-right: 1em; /* Уменьшаем отступ справа перед чертой */
+    padding-left: 1em;
+    width: 8em;
+}
+
+.right {
+    width: 100%;       /* Ширина блока с дз справа */
+    border-left: 2px solid #000000; /* Вертикальная черта между уроком и дз */
+    padding-left: 1em; /* Отступ от черты до текста */
+}
+  
+.left p, .right p {
+  margin: 0.2em 0;      /* Отступы между абзацами */
+}
+  
+.lesson-number {
+  font-weight: 800; /* Номер урока жирным */
+  font-size: 1em;
+}
+  
+.lesson-time {
+    font-size: 1em;
+}
+  
+.homework {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+  
+  /* Только контейнер с уроками получит закругления */
+
+  
+  /* Убираем закругления у внутренних блоков */
+.left, .right {
+    border-radius: 0; /* Убираем закругления на внутренних блоках */
+    overflow: hidden; /* Убирает возможные выступы контента за закруглённые углы */
+}
+
+
+
+.listnotifications {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 1em;
+    padding-top: 1.2em;
+    padding-right: 0.4em;
+    width: 87%;
+    margin: 0 auto;
+    background-color: #E2D6AF;
+    max-height: 67vh;
+    overflow: hidden; /* Скрываем содержимое, выходящее за пределы */
+    box-sizing: border-box; /* Учитываем border и padding */
+}
+
+.listnotifications li {
+    margin-bottom: 1em;
+}
+
+.scroll-container {
+    padding-left: 2em; /* Отступ слева для прокрутки */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    max-height: 100%;
+    margin-bottom: 1em;
+}
+.scroll-container::-webkit-scrollbar {
+    width: 0.7em; /* Ширина ползунка */
+}
+
+/* Стили для ползунка */
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #BCB087;
+    border-radius: 1em;
+    border: 0.19em solid transparent;
+    background-clip: content-box;
+}
+
+/* При наведении */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #9C916B;
+}
+
+
+.scroll-container::-webkit-scrollbar-track:hover {
+    background: #E2D6AF;
+}
+
+.scroll-container::-webkit-scrollbar-corner {
+    background-color: #E2D6AF;
+}
+.onenotif-unreaded {
+    display: flex;
+    justify-content: space-between; /* Располагаем элементы по бокам */
+    align-items: center; /* Выравнивание по вертикали */
+
+    width: 99%;
+    height: 4em;
+    border: #BCB087;
+    background-color: #BCB087;
+    border-radius: 1em;
+}
+.unreaded-text {
+    font-weight: 700;
+    font-size: large;
+    padding-left: 1.7em;
+}
+
+.unreaded-text::before {
+    content: '\2022'; /* Символ Unicode для точки (•) */
+    margin-right: 1em; /* Отступ между точкой и текстом */
+    font-size: 1em; /* Размер точки */
+    color: #000000; /* Цвет точки (можно изменить на любой) */
+}
+
+
+.notif-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size:x-large;
+    padding-right: 2.5em;
+    border-left: 4px solid #000000;
+    height: 2em;
+    padding-left: 2.5em;
+}
+
+.onenotif-readed {
+    display: flex;
+    justify-content: space-between; /* Располагаем элементы по бокам */
+    align-items: center; /* Выравнивание по вертикали */
+
+    width: 99%;
+    height: 4em;
+    border: #BCB087;
+    background-color: #BCB087;
+    border-radius: 1em;
+}
+
+.readed-text {
+    font-weight: 500;
+    font-size: large;
+    padding-left: 1.7em;
+}
+
+.marksselect {
+    list-style: none;
+    display: flex;
+    border-radius: 25px;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    width: 85%;
+    height: 2em;
+    background: #E2D6AF; /* Цвет фона */
+    font-size: 32px; /* Размер текста */
+    padding: 0.2em 1em; /* Поля вокруг текста */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    align-items: center;
+    margin: 0.5em auto 0;
+    position: relative;
+}
+
+.marksselect .active {
+    border-radius: 0.6em;    
+    background-color: #BCB087;
+    height: 90%;
+}
+.marksselect .left, .marksselect .right {
+    flex: 1; /* Каждому блоку выделяется по половине контейнера */
+    display: flex;
+    justify-content: center; /* Выравнивание текста по центру по горизонтали */
+    align-items: center; /* Выравнивание текста по центру по вертикали */
+    border: none;
+}
+
+.marksselect .left:hover, .marksselect .right:hover {
+    border-radius: 0.6em;
+    background-color: #BCB087;
+    height: 96%;
+}
+
+
+.marksselect .divider {
+    margin: 0.5em;
+    width: 0.1em; /* Вертикальная линия между блоками */
+    background-color: #000; /* Цвет линии */
+    height: 100%; /* Высота линии */
+    
+}
+.marks-date {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+    padding-bottom: 0.6em;
+}
+
+.scrollcontainer {
+    margin: 0 auto;
+    width: 92%;
+    overflow-y: auto; /* Вертикальная прокрутка */
+    max-height: 59vh; /* Ограничиваем максимальную высоту контейнера */
+
+}
+.marks-list-container {
+    width: 97%; /* Таблица будет занимать 90% ширины */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 1em; /* Отступы вокруг контейнера */
+    background-color: #E2D6AF; /* Цвет фона */
+    border-radius: 1em; /* Скругленные углы */
+    position: relative; /* Для дальнейших изменений с ползунком */
+    padding-right: 1em; /* Убираем правый отступ, чтобы не было лишнего пространства для ползунка */
+
+}
+
+
+/* Стили для скроллбара */
+.scrollcontainer::-webkit-scrollbar {
+    width: 12px; /* Ширина ползунка */
+    position: absolute; /* Ползунок будет располагаться справа */
+    right: 0; /* Располагаем ползунок справа */
+}
+
+/* Стили для трека (фон полосы прокрутки) */
+.scrollcontainer::-webkit-scrollbar-track {
+    background: #FFF8DA; /* Цвет фона полосы прокрутки */
+    border-radius: 10px; /* Закругленные углы трека */
+}
+
+/* Стили для ползунка */
+.scrollcontainer::-webkit-scrollbar-thumb {
+    background-color: #BCB087; /* Цвет ползунка */
+    border-radius: 10px; /* Закругленные углы ползунка */
+    border: 3px solid transparent; /* Пространство вокруг ползунка */
+    background-clip: content-box; /* Убирает границу вокруг ползунка */
+}
+
+/* Эффект при наведении на ползунок */
+.scrollcontainer::-webkit-scrollbar-thumb:hover {
+    background-color: #8C7A4A; /* Темнее при наведении */
+}
+
+.marks-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.marks-item {
+    display: flex;
+    width: 96%;
+    background-color: #BCB087; /* Цвет фона для строк */
+    padding: 0.7em 1em; /* Отступы между строками */
+    margin-bottom: 0.8em; /* Отступ между строками */
+    border-radius: 1em; /* Скругленные углы у каждой строки */
+}
+
+.marks-item span {
+    padding: 0.3em;
+    text-align: center;
+    flex-shrink: 0; /* Запрещаем сжатие */
+    flex-grow: 0; /* Запрещаем растяжение */
+}
+
+.marks-index {
+    flex: 0 0 4%; /* Задаем фиксированную ширину для каждого из этих элементов */
+    border-right: 3px solid #000; /* Черная вертикальная линия справа от этих элементов */
+    font-size: x-large;
+    font-weight: 900;
+    text-align: center;
+}
+
+.marks-subject {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 10%; /* Задаем фиксированную ширину для каждого из этих элементов */
+    border-right: 3px solid #000; /* Черная вертикальная линия справа от этих элементов */
+    position: center;
+
+}
+
+.marks-task {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 30%; /* Задаем фиксированную ширину для каждого из этих элементов */
+    border-right: 3px solid #000; /* Черная вертикальная линия справа от этих элементов */
+}
+
+.marks-comment {
+    display: flex;
+    align-items: center;
+    flex: 0 0 40%; /* Задаем ширину для комментария и времени */
+    justify-content: left;
+    border-right: 3px solid #000; /* Черная вертикальная линия справа от этих элементов */
+    margin-left: 1em;
+}
+
+.marks-time {
+    display: flex;
+    flex: 0 0 5%; /* Задаем ширину для комментария и времени */
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 800;
+    margin-left: 2em;
+    width: 50%;
+    white-space: nowrap;
+}
+
+/* Убираем границу у последней ячейки */
+.marks-item .marks-time {
+    border-right: none;
+}
+
+.marks-item:last-child {
+    margin-bottom: 0; /* Убираем нижний отступ у последней строки */
+}
+
+.subject-article {
+    margin-left: 1em;
+    background-color: #BCB087;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.subject {
+    display: flex;            /* Включаем flex-контейнер */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: top;      /* Выравнивание по центру по вертикали */
+    padding: 1em 2em 1em;
+    font-size: x-large;
+}
+
+.sub-subject {
+    min-width: 7%;
+    max-width: 25vw;
+    display: Column;
+    margin-right: 1vw;
+    height: 100%;
+    padding-right: 1vw;
+    border-right: 3px black solid;
+}
+
+.sub-subject .quarter {
+    padding-top: 0.5em;
+    display: flex;
+    font-size: large;
+    justify-content: left;
+}
+
+.final-mark {
+    text-align: center; 
+    background-color: #97906a;
+    height: 2%;
+    width: 2%;
+    border-radius: 0.4em;
+    padding: 0.4em;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+
+.marks-container {
+    width: 78%;
+    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 0.1em 1em 1em;
+    gap: 0.6em;  /* Отступы между оценками */
+    align-items: flex-start;
+}
+
+.marks-container .mark {
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 0.3em;
+    justify-content: center;
+    align-items: center;
+    background-color: #a09572;
+    width: 1.45em;
+    height: 1.45em;
+    
+}
+
+.marks-container .mark sub {
+    position: relative; /* Делаем позиционирование относительным */
+    bottom: -0.2em; /* Настраиваем выравнивание подстрочного текста */
+    font-size: 0.8em; /* Можно настроить размер шрифта, если необходимо */
+}
+
+
+.login-body {
+    width: 100%;
+    justify-content: center;
+    background-size: 80%; /* Измените на contain, если хотите подстроить под размер контейнера */
+    background-repeat: repeat; /* Отключает повторение изображения */
+    background-position: 1; /* Центрирует изображение */ 
+}
+
+
+
+.login-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.7em;
+    font-weight: normal;
+
+}
+
+.login-border {
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    border-radius: 2em;
+    border: 0.12rem solid rgba(0, 0, 0, 0.5); /* Прозрачная граница (50%) */
+}
+
+.register-body {
+    width: 100%;
+    justify-content: center;
+    background-size: 80%; /* Измените на contain, если хотите подстроить под размер контейнера */
+    background-repeat: repeat; /* Отключает повторение изображения */
+    background-position: 1; /* Центрирует изображение */
+}
+.register-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.7em;
+    font-weight: normal;
+}
+
+/* Выбор входа за ученика или учителя */
+
+.login-select {
+    display: flex;
+    border-radius: 1em;
+    font-family: "Inter", serif;
+    font-weight: 600;
+    width: 80%;
+    font-size: 1.5rem; /* Размер текста */
+    padding: 0.2em 1em; /* Поля вокруг текста */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    justify-self: center;
+    align-items: center;
+    margin: 0.5em auto 0;
+    position: center;
+    font-weight: bold;
+    margin-bottom: 1rem
+}
+
+.login-select .active {
+    border-radius: 2rem;    
+    height: 105%;
+}
+.login-select .left, .login-select .right {
+    height: 3rem;
+    width: 110%;
+    flex: 1; /* Каждому блоку выделяется по половине контейнера */
+    display: flex;
+    justify-content: center; /* Выравнивание текста по центру по горизонтали */
+    align-items: center; /* Выравнивание текста по центру по вертикали */
+    border: none;
+}
+
+.login-select .left:hover, .login-select .right:hover {
+    border-radius: 2rem;
+    height: 110%;
+}
+
+
+.login-select .divider {
+    margin: 0.5em;
+    width: 0.1em; /* Вертикальная линия между блоками */
+    background-color: #000; /* Цвет линии */
+    height: 100%; /* Высота линии */
+    
+}
+
+.login .login-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem
+}
+.login .input-container {
+    background-color: rgba(255, 249, 229, 0.4);
+    border: 0.0625rem solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.7rem;
+    width: 26vw;
+    height: 4vh;
+    margin-bottom: 1rem;
+}
+.bold {
+    font-weight: bold;
+    padding-left: 0.25rem;
+}
+
+.custom-checkbox {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.custom-checkbox .checkmark {
+    display: flex;
+    padding-left: 0.5em;
+}
+
+.button-container {
+    display: flex;
+    justify-self: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-button {
+    width: 14vw;
+    height: 5vh;
+    border: 0.0625rem solid black;
+    border-radius: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: filter 0.1s ease; /* Плавная анимация */
+}
+
+.login-button:active {
+    background-color: rgba(0, 0, 0, 0.25); /* Легкое затемнение */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25); /* Внутренняя тень */
+}
+
+.login-button:hover {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3)); /* Тень только для содержимого */
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.social-login img:hover {
+    transform: scale(1.2); /* Увеличиваем иконку до 120% */
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3)); /* Тень только для содержимого */
+}
+.social-login img {
+    width: 5rem;
+    transition: transform 0.3s ease, filter 0.2s ease; /* Плавная анимация */
+}
+
+
+.body-teacher {
+    background-color: #F2ECD7;    
+}
+
+.date-teacher {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    white-space: nowrap;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 8em;
+    max-height: 5.5em;
+
+}
+

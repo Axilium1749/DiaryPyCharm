@@ -1,0 +1,95 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body class="login-body">
+    <img class="logo-login" id="logo-login" src="{% static 'main/img/hw-logo-standart.svg' %}" alt="Logo Login">
+
+    <div class="login-container">
+        <h3>Электронный дневник</h3>
+        <div class="login-border">
+            <div class="login-select">
+                <a class="left" href="#" id="studentButton">Ученик</a>
+                <div class="divider"></div>
+                <a class="right" href="#" id="teacherButton">Учитель</a>
+            </div>
+
+            <!-- Форма для ученика -->
+            <form class="login" id="studentForm" method="post">
+                {% csrf_token %}
+                <div>
+                    <p class="login-text">Логин, телефон или почта:</p>
+                    <input class="input-container" type="text" id="username" name="username" placeholder="" required>
+                </div>
+                <div>
+                    <p class="login-text">Пароль:</p>
+                    <input class="input-container" type="password" id="password" name="password" placeholder="" required>
+                </div>
+                <div for="" class="custom-checkbox">
+                    <input type="checkbox" id="checkbox" required>
+                    <span class="checkmark">Я соглашаюсь c правилами обработки <span class="bold">персональных данных</span></span>
+                </div>
+                <div class="button-container">
+                    <button class="login-button" type="submit">Войти</button>
+                </div>
+                <div class="social-login">
+                    <a href="{% provider_login_url 'google' %}" class="google-login-button"><img src="{% static 'main/img/VK Logo.svg'%}" alt=""></a>
+                    <a href="{% provider_login_url 'yandex' %}" class="yandex-login-button"><img src="{% static 'main/img/ya_favicon.svg'%}" alt=""></a>
+                </div>
+            </form>
+
+            <!-- Форма для учителя -->
+            <form class="login" id="teacherForm" style="display: none;">
+                <div>
+                    <p class="login-text">Логин, телефон или почта:</p>
+                    <input class="input-container" type="text" id="username" name="username" placeholder="" required>
+                </div>
+                <div>
+                    <p class="login-text">Пароль:</p>
+                    <input class="input-container" type="password" id="password" name="password" placeholder="" required>
+                </div>
+                <div for="" class="custom-checkbox">
+                    <input type="checkbox" id="checkbox" required>
+                    <span class="checkmark">Я соглашаюсь c правилами обработки <span class="bold">персональных данных</span></span>
+                </div>
+                <div class="button-container">
+                    <button class="login-button" type="submit">Войти</button>
+                </div>
+                <div class="social-login">
+                    <a href="https://ya.ru"><img src="img/ya_favicon.svg" alt=""></a>
+                    <a href="https://vk.com"><img src="img/VK Logo.svg" alt=""></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Изначально активируем кнопку "Ученик" и показываем форму ученика
+        document.getElementById("studentButton").classList.add("active");
+        document.getElementById("studentForm").style.display = "block";
+        document.getElementById("teacherForm").style.display = "none";
+
+        // Слушатели событий для кнопок
+        document.getElementById("studentButton").addEventListener("click", function() {
+            document.getElementById("studentForm").style.display = "block";
+            document.getElementById("teacherForm").style.display = "none";
+            this.classList.add("active");
+            document.getElementById("teacherButton").classList.remove("active");
+        });
+
+        document.getElementById("teacherButton").addEventListener("click", function() {
+            document.getElementById("teacherForm").style.display = "block";
+            document.getElementById("studentForm").style.display = "none";
+            this.classList.add("active");
+            document.getElementById("studentButton").classList.remove("active");
+        });
+    </script>
+</body>
+</html>
