@@ -55,7 +55,7 @@ class User(AbstractUser):
 
 class SchoolClass(models.Model):
     name = models.CharField(max_length=3)
-    class_teacher = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True, related_name="class_teacher")  # Учитель, ведущий класс
+    class_teacher = models.ForeignKey(Teacher, on_delete=models.SET_NULL, null=True, blank=True, related_name="class_teacher")  # Учитель, ведущий класс
 
     def __str__(self):
         return self.name
